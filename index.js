@@ -26,6 +26,6 @@ database.once('connected', () => {
 const routes = require('./routes/routes.js');
 app.use(cors());
 app.use('/api', routes)
-app.listen(4000, ()=>{
+app.listen(process.env.PORT||4000, ()=>{
     console.log("Running on port 4000")
 })
